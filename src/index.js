@@ -123,7 +123,7 @@ const foundLanguage = availableLanguages.find(
     (user) => user.language === language
 );
 
-if (language === foundLanguage.language) {
+if (foundLanguage) {
     res.send(`${foundLanguage.greeting}, ${name}`);
     } else {
         res.send(`Sorry, ${name}, current langauge is not supported. Or written incorrectly, make sure to write your preffered language in lowercase!`);
